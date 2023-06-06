@@ -1,11 +1,10 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace PeopleBookAPI.Controllers
+namespace PeopleBookAPI.Controllers;
+
+[Route("api/groups")]
+[ApiController]
+public class GroupsController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class GroupsController : ControllerBase
-    {
-    }
 }

@@ -12,7 +12,7 @@ public class City
     [MaxLength(50)]
     public required string Name { get; set; }
 
-    
+    public ICollection<User> People { get; set; } = new List<User>();
 
     public City(string name)
     {

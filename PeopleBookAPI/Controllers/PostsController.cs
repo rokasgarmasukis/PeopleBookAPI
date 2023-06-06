@@ -3,8 +3,8 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace PeopleBookAPI.Controllers;
 
-[Route("api/people")]
+[Route("api/posts")]
 [ApiController]
-public class PeopleController : ControllerBase
+public class PostsController : ControllerBase
 {
 }

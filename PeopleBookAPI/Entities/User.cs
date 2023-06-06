@@ -3,7 +3,7 @@ using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PeopleBookAPI.Entities;
 
-public class Person
+public class User
 {
     [Key]
     [DatabaseGenerated(DatabaseGeneratedOption.Identity)]
@@ -17,5 +17,6 @@ public class Person
     [MaxLength(50)]
     public required string Name { get; set; }
 
+    public ICollection<User> Friends { get; set; } = new List<User>();
 
 }

@@ -1,11 +1,11 @@
 ﻿using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
-namespace PeopleBookAPI.Controllers
+namespace PeopleBookAPI.Controllers;
+
+[Route("api/cities")]
+[ApiController]
+public class CitiesController : ControllerBase
 {
-    [Route("api/[controller]")]
-    [ApiController]
-    public class CitiesController : ControllerBase
-    {
-    }
+
 }
