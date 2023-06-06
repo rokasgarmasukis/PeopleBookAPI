@@ -17,17 +17,8 @@ public class Post
     [StringLength(300)]
     public string Body { get; set; }
 
-    [ForeignKey("")]
     public User Author { get; set; }
     public int AuthorId { get; set; }
 
     public DateTime Created { get; set; } = DateTime.Now;
-
-    public Post (int id, string title, string body, User author)
-    {
-        Id = id;
-        Title = title;
-        Body = body;
-        Author = author;
-    }
 }

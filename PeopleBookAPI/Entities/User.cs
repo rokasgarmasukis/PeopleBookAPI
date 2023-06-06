@@ -11,12 +11,15 @@ public class User
 
     [Required]
     [MaxLength(20)]
-    public required string UserName { get; set; }
+    public string UserName { get; set; }
 
     [Required]
     [MaxLength(50)]
-    public required string Name { get; set; }
+    public string Name { get; set; }
 
     public ICollection<User> Friends { get; set; } = new List<User>();
+    public ICollection<Post> Posts { get; set ; } = new List<Post>();
+    public ICollection<Comment> Comments { get; set; } = new List<Comment>();
+    public ICollection<Group> Groups { get; set; } = new List<Group>(); 
 
 }
