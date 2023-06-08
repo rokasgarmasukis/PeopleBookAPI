@@ -11,11 +11,9 @@ public class User
 
     [Required]
     [MaxLength(20)]
-    public string UserName { get; set; }
+    public string Username { get; set; } = string.Empty;
 
-    [Required]
-    [MaxLength(50)]
-    public string Name { get; set; }
+    public string PasswordHash { get; set; } = string.Empty;
 
     public ICollection<User> Friends { get; set; } = new List<User>();
     public ICollection<Post> Posts { get; set ; } = new List<Post>();
