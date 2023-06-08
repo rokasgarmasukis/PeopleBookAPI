@@ -10,6 +10,7 @@ namespace PeopleBookAPI.Controllers;
 
 [Route("api/groups")]
 [ApiController]
+//[Authorize]
 public class GroupsController : ControllerBase
 {
     private readonly IPeopleBookRepository _repository;
@@ -22,7 +23,9 @@ public class GroupsController : ControllerBase
     }
 
 
-    [HttpGet, Authorize]
+    [HttpGet]
+    [Authorize()]
+    //[AllowAnonymous]
     public async Task<ActionResult<IEnumerable<GroupDto>>> GetGroups()
     {
         // implement paging
